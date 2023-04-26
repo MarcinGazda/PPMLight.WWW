@@ -13,6 +13,7 @@ const Header = () => {
     width: 0,
     height: 0,
   });
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -36,28 +37,49 @@ const Header = () => {
     setMenuOpen((prev) => !prev);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 60) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className={styles.header}>
-      <img className={styles.header__logo} src={Logo} alt="Logo PPM Light" />
-      <nav
-        className={`${styles.header__nav} ${
-          menuOpen && size.width < 768 ? styles.isMenu : ""
-        }`}
-      >
-        <ul>
-          <li>Home</li>
-          <li>Features</li>
-          <li>Pricing</li>
-          <li>About us</li>
-        </ul>
-      </nav>
-      <div className={styles.header__toggle}>
-        {!menuOpen ? (
-          <FaBars onClick={menuToggleHandler} />
-        ) : (
-          //<BiMenuAltRight onClick={menuToggleHandler} />
-          <AiOutlineClose onClick={menuToggleHandler} />
-        )}
+    <header
+      className={`${styles.header} ${isScrolled ? styles.isScrolled : ""}`}
+    >
+      <div className={styles.header__content}>
+        <img
+          className={styles.header__content__logo}
+          src={Logo}
+          alt="Logo PPM Light"
+        />
+        <nav
+          className={`${styles.header__content__nav} ${
+            menuOpen && size.width < 768 ? styles.isMenu : ""
+          }`}
+        >
+          <ul>
+            <li>Home</li>
+            <li>Features</li>
+            <li>Pricing</li>
+            <li>About us</li>
+          </ul>
+        </nav>
+        <div className={styles.header__content__toggle}>
+          {!menuOpen ? (
+            <FaBars onClick={menuToggleHandler} />
+          ) : (
+            //<BiMenuAltRight onClick={menuToggleHandler} />
+            <AiOutlineClose onClick={menuToggleHandler} />
+          )}
+        </div>
       </div>
     </header>
   );
