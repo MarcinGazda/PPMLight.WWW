@@ -31,19 +31,27 @@
     @include breakpoint(md) {
     }
     ul {
+      position: fixed;
+      top: 78px;
+      left: 0;
+      height: fit-content;
+      width: 100%;
+      transition: 1s;
+
+      transform: translateY(-100vh);
       background: transparent;
 
       list-style: none;
       display: flex;
       flex-direction: column;
       padding: 0;
-      width: 100;
       margin: 0 10px;
       align-items: center;
 
-      display: none;
-
       @include breakpoint(md) {
+        transform: none;
+        top: 0;
+        position: relative;
         flex-direction: row;
         text-align: center;
         margin: 0 auto;
@@ -64,9 +72,8 @@
     }
 
     &.isMenu {
-      // transform: translate(100%);
       ul {
-        display: flex;
+        transform: none;
       }
     }
   }
