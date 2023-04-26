@@ -33,7 +33,7 @@
     ul {
       list-style: none;
       display: flex;
-      //display: none;   wazne
+      display: none; //wazne
 
       @include breakpoint(md) {
         display: flex;
