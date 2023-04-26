@@ -38,32 +38,26 @@ const Header = () => {
 
   return (
     <header className={classes.header}>
-      <div className={classes.header__content}>
-        <img
-          className={classes.header__content__logo}
-          src={Logo}
-          alt="Logo PPM Light"
-        />
-        <nav
-          className={`${classes.header__content__nav} ${
-            menuOpen && size.width < 768 ? classes.isMenu : ""
-          }`}
-        >
-          <ul>
-            <li>Home</li>
-            <li>Features</li>
-            <li>Pricing</li>
-            <li>About us</li>
-          </ul>
-        </nav>
-        <div className={classes.header__content__toggle}>
-          {!menuOpen ? (
-            <FaBars onClick={menuToggleHandler} />
-          ) : (
-            //<BiMenuAltRight onClick={menuToggleHandler} />
-            <AiOutlineClose onClick={menuToggleHandler} />
-          )}
-        </div>
+      <img className={classes.header__logo} src={Logo} alt="Logo PPM Light" />
+      <nav
+        className={`${classes.header__nav} ${
+          menuOpen && size.width < 768 ? classes.isMenu : ""
+        }`}
+      >
+        <ul>
+          <li>Home</li>
+          <li>Features</li>
+          <li>Pricing</li>
+          <li>About us</li>
+        </ul>
+      </nav>
+      <div className={classes.header__toggle}>
+        {!menuOpen ? (
+          <FaBars onClick={menuToggleHandler} />
+        ) : (
+          //<BiMenuAltRight onClick={menuToggleHandler} />
+          <AiOutlineClose onClick={menuToggleHandler} />
+        )}
       </div>
     </header>
   );
