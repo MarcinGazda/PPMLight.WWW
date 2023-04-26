@@ -12,3 +12,9 @@ body {
   font-family: $Poppins;
   height: 100vh;
 }
+
+::selection {
+  background: $orange;
+  color: $light;
+  text-shadow: none;
+}
