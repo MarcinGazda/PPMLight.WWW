@@ -66,10 +66,18 @@ const Header = () => {
           }`}
         >
           <ul>
-            <li>Home</li>
-            <li>Features</li>
-            <li>Pricing</li>
-            <li>About us</li>
+            <li>
+              <a>Home</a>
+            </li>
+            <li>
+              <a>Features</a>
+            </li>
+            <li>
+              <a>Pricing</a>
+            </li>
+            <li>
+              <a>About us</a>
+            </li>
           </ul>
         </nav>
         <div className={styles.header__content__toggle}>

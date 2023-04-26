@@ -11,7 +11,7 @@ $light: #fff;
 $spacing-md: 16px;
 $spacing-lg: 32px;
 
-$headerHeight: 58px;
+$headerHeight: 52px;
 
 @mixin breakpoint($point) {
   @if $point == md {
