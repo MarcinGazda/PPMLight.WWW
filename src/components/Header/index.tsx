@@ -5,7 +5,7 @@ import { FaBars } from "react-icons/fa";
 
 import Logo from "./../../assets/Logo.png";
 
-import classes from "./styles.module.scss";
+import styles from "./styles.module.scss";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,11 +37,11 @@ const Header = () => {
   };
 
   return (
-    <header className={classes.header}>
-      <img className={classes.header__logo} src={Logo} alt="Logo PPM Light" />
+    <header className={styles.header}>
+      <img className={styles.header__logo} src={Logo} alt="Logo PPM Light" />
       <nav
-        className={`${classes.header__nav} ${
-          menuOpen && size.width < 768 ? classes.isMenu : ""
+        className={`${styles.header__nav} ${
+          menuOpen && size.width < 768 ? styles.isMenu : ""
         }`}
       >
         <ul>
@@ -51,7 +51,7 @@ const Header = () => {
           <li>About us</li>
         </ul>
       </nav>
-      <div className={classes.header__toggle}>
+      <div className={styles.header__toggle}>
         {!menuOpen ? (
           <FaBars onClick={menuToggleHandler} />
         ) : (
