@@ -5,10 +5,12 @@
   background: transparent;
   position: sticky;
   top: 0;
-  transition: all 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
 
   &.isScrolled {
     background-color: $light;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
   }
 
   &__content {
@@ -28,6 +30,7 @@
     &__logo {
       height: $headerHeight;
       width: fit-content;
+      z-index: 5;
     }
 
     &__nav {
@@ -39,7 +42,8 @@
       }
       ul {
         position: fixed;
-        top: 78px;
+        //top: 78px;
+        top: 70px;
         left: 0;
         height: fit-content;
         width: 100%;
@@ -101,6 +105,9 @@
       &.isMenu {
         ul {
           transform: none;
+          background: $light;
+          z-index: 4;
+          box-shadow: 0 10px 30px 0 rgba(200, 167, 70, 0.2);
         }
       }
     }
@@ -111,7 +118,7 @@
       top: calc(($headerHeight/2) - 12.5px);
       right: 1.5rem;
       font-size: 2.5rem;
-      transition: 0.5s ease all;
+      transition: display 0.5s ease;
 
       &:hover {
         color: $orange;
