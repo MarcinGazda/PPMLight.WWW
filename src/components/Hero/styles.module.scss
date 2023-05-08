@@ -14,42 +14,52 @@
 
   .socialMedia {
     display: none;
-    flex-direction: column;
+    flex-flow: wrap column;
     width: 100px;
+    height: 400px;
     @include breakpoint(md) {
       display: flex;
     }
-    .icon {
+
+    .circle {
       margin: 10px 0;
-      height: 40px;
-      width: 40px;
+      height: 45px;
+      width: 45px;
+      background: #fab73a2c;
+      border-radius: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .icon {
+        height: 15px;
+      }
     }
 
     .follow {
       transform: rotate(-90deg);
+      translate: -40px 20px;
     }
   }
 
   .text {
     display: flex;
-    flex-direction: column;
+    flex-flow: wrap column;
     align-items: center;
 
     @include breakpoint(md) {
       align-items: start;
     }
     .title {
-      max-height: 88px;
-      max-width: 360px;
       font-size: 30px;
       line-height: 44px;
       text-align: center;
       font-weight: 400;
+      width: fit-content;
+      height: fit-content;
 
       @include breakpoint(md) {
         font-size: 50px;
-        max-width: 526px;
-        max-height: 160px;
         text-align: start;
         line-height: 80px;
         margin: 0;
@@ -66,24 +76,33 @@
         font-size: 16px;
         margin: 0;
         line-height: 28px;
-        margin: 30px 15px;
+        margin: 30px 0;
       }
     }
 
     .button {
       margin-bottom: 8px;
-      font-size: 14px;
+      font-size: 16px;
       padding: 12px 25px;
       border-color: $light;
       border-style: none;
       border-radius: 4px;
       color: $light;
-      font-weight: 400;
+      font-weight: 600;
       background: linear-gradient(
         90deg,
-        rgb(109, 115, 239) 0%,
-        rgb(163, 120, 252) 100%
+        rgb(250, 181, 54) 0%,
+        rgb(246, 200, 113) 100%
       );
+      filter: blur(0px) grayscale(0%) brightness(100%);
+
+      .button:hover {
+        filter: blur(0px) grayscale(0%) brightness(120%);
+        background: linear-gradient(
+          90deg,
+          rgb(246, 200, 113) 100% rgb(250, 181, 54) 0%
+        );
+      }
 
       @include breakpoint(md) {
         line-height: 40px;

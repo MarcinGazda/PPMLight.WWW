@@ -8,18 +8,24 @@ const Hero = () => {
   return (
     <div className={styles.container}>
       <div className={styles.socialMedia}>
-        <img className={styles.icon} src={twitter} alt="twitter icon" />
-        <img className={styles.icon} src={facebook} alt="facebook icon" />
-        <img className={styles.icon} src={instagram} alt="instagram icon" />
+        <div className={styles.circle}>
+          <img className={styles.icon} src={twitter} alt="twitter icon" />
+        </div>
+        <div className={styles.circle}>
+          <img className={styles.icon} src={facebook} alt="facebook icon" />
+        </div>
+        <div className={styles.circle}>
+          <img className={styles.icon} src={instagram} alt="instagram icon" />
+        </div>
         <span className={styles.follow}>Follow us:</span>
       </div>
       <div className={styles.text}>
-        <h1 className={styles.title}>{`The biggest platform
-        for your growth.`}</h1>
+        <h1
+          className={styles.title}
+        >{`The biggest platform\nfor your growth.`}</h1>
         <p
           className={styles.description}
-        >{`There are many variations of passages of Lorem Ipsum available,
-        but the majority have suffered alteration in some form.`}</p>
+        >{`There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.`}</p>
         <button className={styles.button}>Read More</button>
       </div>
       <img className={styles.img} src={HeroImg} alt="" />
