@@ -22,9 +22,18 @@ const Header = () => {
         height: window.innerHeight,
       });
     };
-    window.addEventListener("resize", handleResize);
+    
+    const handleScroll = () => {
+      window.scrollY >= 60 ? setIsScrolled(true) : setIsScrolled(false)
+    };
 
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("resize", handleResize)
+      window.removeEventListener("scroll", handleScroll)
+    };
   }, []);
 
   useEffect(() => {
@@ -36,19 +45,6 @@ const Header = () => {
   const menuToggleHandler = () => {
     setMenuOpen((prev) => !prev);
   };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY >= 60) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <header

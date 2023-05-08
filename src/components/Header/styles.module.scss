@@ -10,6 +10,7 @@
 
   &.isScrolled {
     background-color: $light;
+    z-index: 100;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
   }
 
