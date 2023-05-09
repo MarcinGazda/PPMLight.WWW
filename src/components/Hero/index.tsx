@@ -22,7 +22,7 @@ const Hero = () => {
   }, []);
 
   const calculatePercentage = (width: number) => {
-    return width > minValue ? width / maxValue : 1;
+    return width > minValue && width < maxValue ? width / maxValue : 1;
   };
 
   const scaleStyle = { scale: `${calculatePercentage(screenWidth)}` };
@@ -38,8 +38,8 @@ const Hero = () => {
         </div>
         <div className={styles.circle}>
           <img className={styles.icon} src={instagram} alt="instagram icon" />
+          <span className={styles.follow}>Follow us:</span>
         </div>
-        <span className={styles.follow}>Follow us:</span>
       </div>
       <div className={styles.text}>
         <h1

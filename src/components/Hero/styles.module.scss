@@ -15,9 +15,10 @@
 
   .socialMedia {
     display: none;
-    flex-flow: wrap column;
-    width: 100px;
+    flex-direction: column;
+    min-width: 100px;
     height: 400px;
+    //margin-left: 0px;
     @include breakpoint(md) {
       display: flex;
     }
@@ -32,14 +33,17 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      position: relative;
+
+      .follow {
+        position: absolute;
+        width: 82px;
+        transform: rotate(-90deg);
+        top: 95px;
+      }
       .icon {
         height: 15px;
       }
-    }
-
-    .follow {
-      transform: rotate(-90deg);
-      translate: -40px 20px;
     }
   }
 
@@ -56,8 +60,8 @@
       line-height: 44px;
       text-align: center;
       font-weight: 400;
-      width: fit-content;
-      height: fit-content;
+      width: 464px;
+      height: 160px;
 
       @include breakpoint(md) {
         font-size: 50px;
