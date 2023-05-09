@@ -6,6 +6,7 @@
   align-items: center;
   width: 100%;
   margin: 20px auto;
+  transition: scale linear 0.3s;
 
   @include breakpoint(md) {
     flex-direction: row;
@@ -96,12 +97,13 @@
       );
       filter: blur(0px) grayscale(0%) brightness(100%);
 
-      .button:hover {
+      &:hover {
         filter: blur(0px) grayscale(0%) brightness(120%);
         background: linear-gradient(
           90deg,
           rgb(246, 200, 113) 100% rgb(250, 181, 54) 0%
         );
+        cursor: pointer;
       }
 
       @include breakpoint(md) {
