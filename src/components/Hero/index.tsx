@@ -1,8 +1,8 @@
 import styles from "./styles.module.scss";
 import HeroImg from "../../assets/hero.png";
-import facebook from "../../assets/facebook.png";
-import twitter from "../../assets/twitter.png";
-import instagram from "../../assets/instagram.png";
+import facebook from "../../assets/icons/facebook.png";
+import twitter from "../../assets/icons/twitter.png";
+import instagram from "../../assets/icons/instagram.png";
 import { useEffect, useState } from "react";
 
 const Hero = () => {
@@ -22,7 +22,7 @@ const Hero = () => {
   }, []);
 
   const calculatePercentage = (width: number) => {
-    return width > minValue && width < maxValue ? width / maxValue : 1;
+    return width > minValue && width < maxValue ? (width / maxValue) * 0.95 : 1;
   };
 
   const scaleStyle = { scale: `${calculatePercentage(screenWidth)}` };
