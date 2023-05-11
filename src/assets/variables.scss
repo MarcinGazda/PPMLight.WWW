@@ -16,6 +16,11 @@ $spacing-lg: 32px;
 $headerHeight: 52px;
 
 @mixin breakpoint($point) {
+  @if $point == xs {
+    @media (min-width: 350px) {
+      @content;
+    }
+  }
   @if $point == md {
     // 768px
     @media (min-width: 48em) {
