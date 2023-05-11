@@ -1,7 +1,7 @@
 import "./App.scss";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import MockupContent from "./components/MockupContent";
+import Header from "./views/Header";
+import Hero from "./views/Hero";
+import MockupContent from "./views/MockupContent";
 
 function App() {
   return (
