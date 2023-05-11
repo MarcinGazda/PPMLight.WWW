@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 
 import { AiOutlineClose } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
-
-import Logo from "./../../assets/Logo.png";
+import Logo from "../../assets/logoPPMLight.svg";
 
 import styles from "./styles.module.scss";
 
@@ -22,17 +21,17 @@ const Header = () => {
         height: window.innerHeight,
       });
     };
-    
+
     const handleScroll = () => {
-      window.scrollY >= 60 ? setIsScrolled(true) : setIsScrolled(false)
+      window.scrollY >= 60 ? setIsScrolled(true) : setIsScrolled(false);
     };
 
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("resize", handleResize)
-      window.removeEventListener("scroll", handleScroll)
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -48,7 +47,9 @@ const Header = () => {
 
   return (
     <header
-      className={`${styles.header} ${isScrolled ? styles.isScrolled : ""}`}
+      className={`${styles.header} ${isScrolled ? styles.isScrolled : ""} ${
+        menuOpen && size.width < 768 ? styles.isMenu : ""
+      }`}
     >
       <div className={styles.header__content}>
         <img
