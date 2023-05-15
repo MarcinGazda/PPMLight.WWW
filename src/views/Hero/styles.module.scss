@@ -1,132 +1,291 @@
 @use "./../../assets/variables.scss" as *;
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px 20px;
+.background {
+  position: relative;
+  .imgBackground {
+    position: absolute;
+    width: 380px;
+    top: -45vw;
+    left: -5vw;
+    opacity: 0.4;
+    overflow-x: hidden;
+    max-width: 100%;
 
-  @include breakpoint(md) {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .socialMedia {
-    display: none;
-    flex-direction: column;
-    min-width: 100px;
-    height: 400px;
-    @include breakpoint(md) {
-      display: flex;
+    @include breakpoint(xs) {
+      width: 700px;
+      width: 100%;
+      left: 0;
+      top: -30%;
     }
 
-    .circle {
-      margin: 10px 0;
-      height: 45px;
-      width: 45px;
-      background: #fab73a2c;
-      border-radius: 50%;
+    @include breakpoint(md) {
+      max-width: 1681px;
+      inset: 0;
+      margin-inline: auto;
+      translate: 0 -45%;
+    }
+  }
 
-      display: flex;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 20px;
+    position: relative;
+
+    @include breakpoint(md) {
+      flex-direction: row;
       justify-content: center;
-      align-items: center;
+    }
+
+    .socialMedia {
+      display: none;
+      flex-direction: column;
+      min-width: 100px;
+      height: 400px;
       position: relative;
+      @include breakpoint(md) {
+        display: flex;
+      }
 
       .follow {
         position: absolute;
-        width: 82px;
         transform: rotate(-90deg);
-        top: 95px;
+        top: 230px;
+        left: -15px;
       }
-      .icon {
-        height: 15px;
+      .circle {
+        margin: 10px 0;
+        height: 45px;
+        width: 45px;
+        background: #fab73a2c;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon {
+          height: 15px;
+        }
       }
     }
-  }
 
-  .text {
-    display: flex;
-    flex-flow: wrap column;
-    align-items: center;
+    .text {
+      display: flex;
+      flex-flow: wrap column;
+      align-items: center;
+      margin-bottom: 10px;
 
-    @include breakpoint(md) {
-      align-items: start;
-    }
-    .title {
-      max-width: 300px;
-      line-height: 43px;
-      text-align: center;
-      font-weight: 400;
-      font-size: 29px;
-      margin-bottom: 0;
       @include breakpoint(md) {
-        max-width: none;
-        line-height: 44px;
-        font-size: 30px;
-        width: 464px;
-        height: 160px;
-        font-size: 50px;
-        text-align: start;
-        line-height: 80px;
-        margin: 0;
+        align-items: start;
       }
-    }
+      .title {
+        max-width: 300px;
+        line-height: 43px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 29px;
+        margin-bottom: 0;
+        color: $dark;
+        @include breakpoint(md) {
+          max-width: none;
+          line-height: 44px;
+          font-size: 30px;
+          width: 464px;
+          height: 160px;
+          font-size: 50px;
+          text-align: start;
+          line-height: 80px;
+          margin: 0;
+        }
 
-    .description {
-      text-align: center;
-      font-size: 17px;
-      line-height: 27px;
-      color: rgb(142, 152, 159);
-      max-width: 470px;
-      @include breakpoint(md) {
-        text-align: left;
+        &::before {
+          content: "";
+          display: block;
+          height: 8px;
+          width: 8px;
+          border-radius: 50%;
+          background-color: $green;
+          translate: 0 -30px;
+          transform: translateY(-30px);
+          animation: floating 3s linear infinite;
+
+          @include breakpoint(md) {
+            height: 15px;
+            width: 15px;
+            transform: translate(-30px, -50px);
+          }
+        }
+        @keyframes floating {
+          0% {
+            translate: 0 -1vh;
+          }
+
+          50% {
+            translate: 0 1vh;
+          }
+
+          100% {
+            translate: 0 -1vh;
+          }
+        }
+      }
+
+      .description {
+        text-align: center;
+        font-size: 17px;
+        line-height: 27px;
+        color: rgb(142, 152, 159);
+        max-width: 470px;
+        @include breakpoint(md) {
+          text-align: left;
+          font-size: 16px;
+          line-height: 28px;
+          margin: 30px 0;
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          height: 8px;
+          width: 8px;
+          border-radius: 50%;
+          background-color: $orange;
+          transform: translate(480px, -30px);
+          animation: blinking 1.5s linear infinite;
+
+          @include breakpoint(md) {
+            height: 12px;
+            width: 12px;
+            transform: translate(370px, 90px);
+          }
+        }
+        @keyframes blinking {
+          0% {
+            opacity: 1;
+          }
+
+          50% {
+            opacity: 0;
+          }
+
+          100% {
+            opacity: 1;
+          }
+        }
+      }
+
+      .button {
+        margin-bottom: 8px;
         font-size: 16px;
-        line-height: 28px;
-        margin: 30px 0;
-      }
-    }
-
-    .button {
-      margin-bottom: 8px;
-      font-size: 16px;
-      padding: 12px 25px;
-      border-color: $light;
-      border-style: none;
-      border-radius: 4px;
-      color: $light;
-      font-weight: 400;
-      background: linear-gradient(
-        90deg,
-        rgb(250, 181, 54) 0%,
-        rgb(246, 200, 113) 100%
-      );
-      filter: blur(0px) grayscale(0%) brightness(100%);
-
-      &:hover {
-        filter: blur(0px) grayscale(0%) brightness(120%);
+        padding: 12px 25px;
+        border-color: $light;
+        border-style: none;
+        border-radius: 4px;
+        color: $light;
+        font-weight: 400;
         background: linear-gradient(
           90deg,
-          rgb(246, 200, 113) 100% rgb(250, 181, 54) 0%
+          rgb(250, 181, 54) 0%,
+          rgb(246, 200, 113) 100%
         );
-        cursor: pointer;
-      }
+        filter: blur(0px) grayscale(0%) brightness(100%);
 
-      @include breakpoint(md) {
-        line-height: 40px;
-        font-weight: 600;
-        padding: 4px 25px;
-        margin-bottom: 100px;
+        &:hover {
+          filter: blur(0px) grayscale(0%) brightness(120%);
+          background: linear-gradient(
+            90deg,
+            rgb(246, 200, 113) 100% rgb(250, 181, 54) 0%
+          );
+          cursor: pointer;
+        }
+
+        @include breakpoint(md) {
+          line-height: 40px;
+          font-weight: 600;
+          padding: 4px 25px;
+          margin-bottom: 100px;
+        }
       }
     }
-  }
+    .imgWrapper {
+      position: relative;
 
-  .img {
-    width: 287px;
-    height: 197px;
+      &::before {
+        content: "";
+        display: block;
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        background-color: $gray;
+        transform: translate(30px, -60px);
+        animation: floatingL 4s ease-in-out infinite;
 
-    @include breakpoint(md) {
-      width: 869px;
-      height: 597px;
+        @include breakpoint(md) {
+          height: 11px;
+          width: 11px;
+          transform: translate(-30px, 0px);
+        }
+      }
+
+      &::after {
+        position: absolute;
+        top: -30px;
+        right: 20px;
+        content: "";
+        display: block;
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        background-color: $green;
+        animation: orbit 2.7s linear infinite;
+
+        @include breakpoint(md) {
+          inset: inherit;
+          bottom: 60px;
+          left: 90px;
+          height: 11px;
+          width: 11px;
+        }
+      }
+      @keyframes floatingL {
+        0% {
+          translate: 0 -1vh;
+        }
+
+        50% {
+          translate: 0 2vh;
+        }
+
+        100% {
+          translate: 0 -1vh;
+        }
+      }
+
+      @keyframes orbit {
+        from {
+          transform: rotate(0deg) translateX(12px) rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg) translateX(12px) rotate(-360deg);
+        }
+      }
+
+      .img {
+        width: 287px;
+        height: 197px;
+        max-width: 100%;
+
+        @include breakpoint(xs) {
+          max-width: none;
+        }
+
+        @include breakpoint(md) {
+          width: 869px;
+          height: 597px;
+        }
+      }
     }
   }
 }
