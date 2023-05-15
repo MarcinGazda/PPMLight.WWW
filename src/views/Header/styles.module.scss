@@ -4,8 +4,8 @@
   width: 100%;
   position: sticky;
   top: 0;
-  z-index: 100;
   transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  z-index: 100;
 
   &.isScrolled {
     background-color: $light;
@@ -18,12 +18,17 @@
 
   &__content {
     background: transparent;
-    height: $headerHeight + 20px;
     padding: 10px 15px;
     flex-direction: column;
     margin: 0 auto;
     max-width: 1170px;
     display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: $headerHeight;
+    @include breakpoint(xs) {
+      height: $headerHeight + 20px;
+    }
 
     @include breakpoint(md) {
       flex-direction: row;
@@ -32,12 +37,13 @@
 
     &__logo {
       z-index: 5;
-      height: 40px;
-      translate: -30px;
+      height: 30px;
+      width: fit-content;
+      align-self: center;
       @include breakpoint(xs) {
-        translate: none;
-        height: $headerHeight;
+        height: calc($headerHeight - 10px);
         width: fit-content;
+        align-self: center;
       }
     }
 
@@ -50,21 +56,23 @@
       }
       ul {
         position: fixed;
-        top: 70px;
         left: 0;
         width: 100%;
         transition: 1s;
+        top: 50px;
         z-index: 90;
         transform: translateY(-100vh);
-        background: transparent;
         list-style: none;
         display: flex;
         flex-direction: column;
-        padding: 0;
-        margin: 0 0px;
+        padding: 0 0 10px 0;
+        margin: 0;
         align-items: center;
-
         overflow: hidden;
+
+        @include breakpoint(xs) {
+          top: 70px;
+        }
 
         @include breakpoint(md) {
           transform: none;
@@ -122,8 +130,8 @@
       position: absolute;
       transition: display 0.5s ease;
       top: 0.5rem;
-      right: 0.5rem;
-      font-size: 2.5rem;
+      right: 1rem;
+      font-size: 2.3rem;
 
       @include breakpoint(xs) {
         top: calc(($headerHeight/2) - 12.5px);
