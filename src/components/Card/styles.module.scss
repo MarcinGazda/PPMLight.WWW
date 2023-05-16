@@ -1,0 +1,41 @@
+@use "../../assets/variables.scss" as *;
+
+.card {
+  padding: 1.875rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 3.125rem 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-bottom: 1.875rem;
+  margin-inline: 1rem;
+  background: $light;
+
+  @include breakpoint(xs) {
+    display: flex;
+  }
+
+  .circle {
+    min-width: 5rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, #fff, #1733c3);
+    opacity: 0.2;
+
+    @include breakpoint(xs) {
+      margin-right: 2rem;
+    }
+  }
+  .text {
+    .title {
+      font-size: 1.3rem;
+      font-weight: 400;
+
+      @include breakpoint(xs) {
+        margin-top: 0;
+      }
+    }
+    .description {
+      color: $text-gray;
+    }
+  }
+}
