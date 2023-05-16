@@ -136,7 +136,7 @@
         text-align: center;
         font-size: 17px;
         line-height: 27px;
-        color: rgb(142, 152, 159);
+        color: $text-gray;
         max-width: 470px;
         @include breakpoint(md) {
           text-align: left;
@@ -152,9 +152,12 @@
           width: 8px;
           border-radius: 50%;
           background-color: $orange;
-          transform: translate(480px, -30px);
           animation: blinking 1.5s linear infinite;
+          transform: translate(160px, -20px);
 
+          @include breakpoint(xs) {
+            transform: translate(300px, -20px);
+          }
           @include breakpoint(md) {
             height: 12px;
             width: 12px;
