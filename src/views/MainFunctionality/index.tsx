@@ -1,8 +1,34 @@
 import styles from "./styles.module.scss";
 import backgroundImg from "./../../assets/background/background-1.png";
 import Card from "../../components/Card";
+import { Test } from "../../assets/SVG/Test";
 
-//import { ReactComponent as Favicon } from "../../assets/logoPPMLight.svg";
+const MAIN_FUNCTIONALITY = [
+  {
+    svg: <Test />,
+    title: "Customized Invoices",
+    description:
+      "There are many variations of passages of Lorem Ipsum available.",
+  },
+  {
+    svg: <Test />,
+    title: "Customized Invoices",
+    description:
+      "There are many variations of passages of Lorem Ipsum available.",
+  },
+  {
+    svg: <Test />,
+    title: "Customized Invoices",
+    description:
+      "There are many variations of passages of Lorem Ipsum available.",
+  },
+  {
+    svg: <Test />,
+    title: "Customized Invoices",
+    description:
+      "There are many variations of passages of Lorem Ipsum available.",
+  },
+];
 
 const MainFunctionality = () => {
   return (
@@ -14,26 +40,13 @@ const MainFunctionality = () => {
         a look at this beatiful-crafted
       </p>
       <div className={styles.wrapper}>
-        <Card
-          svg={<></>}
-          title="Customized Invoices"
-          description="There are many variations of passages of Lorem Ipsum available."
-        />
-        <Card
-          svg={<></>}
-          title="Customized Invoices"
-          description="There are many variations of passages of Lorem Ipsum available."
-        />
-        <Card
-          svg={<></>}
-          title="Customized Invoices"
-          description="There are many variations of passages of Lorem Ipsum available."
-        />
-        <Card
-          svg={<></>}
-          title="Customized Invoices"
-          description="There are many variations of passages of Lorem Ipsum available."
-        />
+        {MAIN_FUNCTIONALITY.map((data) => (
+          <Card
+            svg={data.svg}
+            title={data.title}
+            description={data.description}
+          />
+        ))}
       </div>
     </section>
   );

@@ -7,10 +7,30 @@
     position: absolute;
     opacity: 0.5;
     max-width: 100%;
+    width: 790px;
     top: 0;
     left: -30%;
     rotate: 180deg;
     z-index: -1;
+    animation: bounces 2s infinite alternate;
+
+    @include breakpoint(md) {
+      inset: 0;
+    }
+
+    @include breakpoint(lg) {
+      inset: 0;
+      left: 20%;
+    }
+
+    @keyframes bounces {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-25px);
+      }
+    }
   }
 
   .title {
@@ -43,9 +63,11 @@
   }
 
   .wrapper {
-    @include breakpoint(62rem) {
+    @include breakpoint(lg) {
       display: grid;
-      grid-template-columns: 555px 555px;
+      justify-content: center;
+      //grid-template-columns: repeat(2, 587px); //470
+      grid-template-columns: repeat(2, minmax(460px, 587px)); //470
     }
   }
 }
