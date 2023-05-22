@@ -8,6 +8,31 @@
   margin-bottom: 1.875rem;
   margin-inline: 1rem;
   background: $light;
+  transition: all 0.5s ease-in-out;
+
+  &::before {
+    border-radius: 4px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    background-image: -webkit-linear-gradient(0deg, #6d73ef, #a378fc);
+  }
+
+  &::after {
+    content: "";
+    background: url(../../assets/background/background-after.png);
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    width: 95px;
+    height: 95px;
+    bottom: 10px;
+  }
 
   @include breakpoint(xs) {
     display: flex;
@@ -20,11 +45,15 @@
     border-radius: 50%;
     background-image: linear-gradient(90deg, #fff, #1733c3);
     opacity: 0.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @include breakpoint(xs) {
       margin-right: 2rem;
     }
   }
+
   .text {
     .title {
       font-size: 1.3rem;
@@ -34,8 +63,24 @@
         margin-top: 0;
       }
     }
+
     .description {
+      transition: color 0.5s ease-in-out;
       color: $text-gray;
+    }
+  }
+
+  &:hover {
+    color: white;
+    background: transparent;
+    box-shadow: 0 10px 20px 0 rgba(139, 118, 246, 0.4);
+
+    .description {
+      color: white;
+    }
+
+    &::before {
+      opacity: 1;
     }
   }
 }
