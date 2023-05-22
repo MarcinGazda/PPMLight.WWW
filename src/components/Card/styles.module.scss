@@ -20,7 +20,8 @@
     left: 0;
     opacity: 0;
     z-index: -1;
-    background-image: -webkit-linear-gradient(0deg, #6d73ef, #a378fc);
+    background-image: -webkit-linear-gradient(0deg, #bbd2b4, #cfddcb);
+    //background-image: -webkit-linear-gradient(0deg, $orange, #f6e1bb);
   }
 
   &::after {
@@ -38,19 +39,40 @@
     display: flex;
   }
 
-  .circle {
-    min-width: 5rem;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    background-image: linear-gradient(90deg, #fff, #1733c3);
-    opacity: 0.2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .wrapper {
+    position: relative;
+    .circle {
+      min-width: 5rem;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      background-image: linear-gradient(0deg, #fff, #c0cdbc);
+      //background-image: linear-gradient(0deg, #fff, #f7ab1e);
+      opacity: 0.2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-    @include breakpoint(xs) {
-      margin-right: 2rem;
+      @include breakpoint(xs) {
+        margin-right: 2rem;
+      }
+    }
+
+    svg {
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      opacity: 1;
+      fill: $green;
+      //fill: $orange;
+    }
+
+    svg:last-child {
+      transition: opacity 0.5s ease-in-out;
+      opacity: 0;
+      g {
+        fill: #fff;
+      }
     }
   }
 
@@ -73,7 +95,12 @@
   &:hover {
     color: white;
     background: transparent;
-    box-shadow: 0 10px 20px 0 rgba(139, 118, 246, 0.4);
+    box-shadow: 0 10px 20px 0 #c0cdbc;
+    //box-shadow: 0 10px 20px 0 #fddb9b;
+
+    svg:last-child {
+      opacity: 1;
+    }
 
     .description {
       color: white;

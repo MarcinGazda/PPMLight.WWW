@@ -40,11 +40,12 @@ const MainFunctionality = () => {
         a look at this beatiful-crafted
       </p>
       <div className={styles.wrapper}>
-        {MAIN_FUNCTIONALITY.map((data) => (
+        {MAIN_FUNCTIONALITY.map((data, index) => (
           <Card
             svg={data.svg}
             title={data.title}
             description={data.description}
+            key={index}
           />
         ))}
       </div>

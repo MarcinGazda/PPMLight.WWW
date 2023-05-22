@@ -3,12 +3,12 @@ export const Test = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       id="Warstwa_2"
-      className="yellow"
+      className="orange"
       viewBox="0 0 59.2 97"
       width="3rem"
       height="3rem"
     >
-      <g fill="#1f2aec" id="Layer_1">
+      <g id="Layer_1">
         <g id="NewGroupe41">
           <g id="NewGroup0-8">
             <path
