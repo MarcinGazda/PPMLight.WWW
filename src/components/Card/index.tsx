@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 
-enum Color {
+export enum Color {
   Green,
   Gray,
 }
@@ -14,9 +14,17 @@ type props = {
 
 const Card = (props: props) => {
   return (
-    <div className={styles.card}>
-      <div className={`${styles.wrapper} ${styles.green}`}>
-        <div className={styles.circle}></div>
+    <div
+      className={`${styles.card} ${
+        props?.color === Color.Green ? styles.green : ""
+      }${props?.color === Color.Gray ? styles.gray : ""}`}
+    >
+      <div className={`${styles.wrapper}`}>
+        <div
+          className={`${styles.circle} ${
+            props?.color === Color.Green ? styles.green : ""
+          }${props?.color === Color.Gray ? styles.gray : ""}`}
+        ></div>
         {props.svg}
         {props.svg}
       </div>

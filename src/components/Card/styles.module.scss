@@ -20,8 +20,13 @@
     left: 0;
     opacity: 0;
     z-index: -1;
-    background-image: -webkit-linear-gradient(0deg, #bbd2b4, #cfddcb);
-    //background-image: -webkit-linear-gradient(0deg, $orange, #f6e1bb);
+    background-image: -webkit-linear-gradient(0deg, $orange, #f3daac);
+  }
+
+  &.green {
+    &::before {
+      background-image: -webkit-linear-gradient(0deg, #bbd2b4, #cfddcb);
+    }
   }
 
   &::after {
@@ -39,6 +44,22 @@
     display: flex;
   }
 
+  svg {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    opacity: 1;
+    fill: $orange;
+  }
+
+  svg:last-child {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    g {
+      fill: #fff;
+    }
+  }
+
   .wrapper {
     position: relative;
     .circle {
@@ -46,8 +67,7 @@
       width: 5rem;
       height: 5rem;
       border-radius: 50%;
-      background-image: linear-gradient(0deg, #fff, #c0cdbc);
-      //background-image: linear-gradient(0deg, #fff, #f7ab1e);
+      background-image: linear-gradient(0deg, #fff, #f7ab1e);
       opacity: 0.2;
       display: flex;
       align-items: center;
@@ -56,22 +76,9 @@
       @include breakpoint(xs) {
         margin-right: 2rem;
       }
-    }
 
-    svg {
-      position: absolute;
-      left: 1rem;
-      top: 1rem;
-      opacity: 1;
-      fill: $green;
-      //fill: $orange;
-    }
-
-    svg:last-child {
-      transition: opacity 0.5s ease-in-out;
-      opacity: 0;
-      g {
-        fill: #fff;
+      &.green {
+        background-image: linear-gradient(0deg, #fff, #a3ae9f);
       }
     }
   }
@@ -95,8 +102,7 @@
   &:hover {
     color: white;
     background: transparent;
-    box-shadow: 0 10px 20px 0 #c0cdbc;
-    //box-shadow: 0 10px 20px 0 #fddb9b;
+    box-shadow: 0 10px 20px 0 #fddb9b;
 
     svg:last-child {
       opacity: 1;
@@ -109,5 +115,17 @@
     &::before {
       opacity: 1;
     }
+  }
+
+  &.green {
+    &:hover {
+      box-shadow: 0 10px 20px 0 #c0cdbc;
+    }
+  }
+}
+
+.green {
+  svg {
+    fill: $green;
   }
 }
