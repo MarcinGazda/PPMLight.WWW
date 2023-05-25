@@ -3,6 +3,9 @@ import backgroundImg from "./../../assets/background/background-1.png";
 import Card from "../../components/Card";
 import { Test } from "../../assets/SVG/Test";
 import { Color } from "../../components/Card";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
+import Aos from "aos";
 
 const MAIN_FUNCTIONALITY = [
   {
@@ -34,11 +37,20 @@ const MAIN_FUNCTIONALITY = [
 ];
 
 const MainFunctionality = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+    return () => {
+      Aos.refresh();
+    };
+  }, []);
+
   return (
     <section className={styles.container}>
       <img className={styles.background} src={backgroundImg} alt="" />
-      <h2 className={styles.title}>How Does Sofbox Work?</h2>
-      <p className={styles.description}>
+      <h2 data-aos="slide-left" className={styles.title}>
+        How Does Sofbox Work?
+      </h2>
+      <p data-aos="slide-right" className={styles.description}>
         If you are planning on developing a product landing app or website, take
         a look at this beatiful-crafted
       </p>
@@ -50,6 +62,7 @@ const MainFunctionality = () => {
             description={data.description}
             color={data.color}
             key={index}
+            data-aos="fade-up"
           />
         ))}
       </div>
