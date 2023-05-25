@@ -44,6 +44,8 @@
       min-width: 100px;
       height: 400px;
       position: relative;
+      animation: show-up 3.5s;
+
       @include breakpoint(md) {
         display: flex;
       }
@@ -76,6 +78,7 @@
       flex-flow: wrap column;
       align-items: center;
       margin-bottom: 10px;
+      animation: show-up 1s ease-in;
 
       @include breakpoint(md) {
         align-items: start;
@@ -214,6 +217,8 @@
     }
     .imgWrapper {
       position: relative;
+      //overflow-y: hidden;
+      animation: overflow 2s;
 
       &::before {
         content: "";
@@ -279,6 +284,7 @@
         width: 287px;
         height: 197px;
         max-width: 100%;
+        animation: pop-up 2s ease;
 
         @include breakpoint(xs) {
           max-width: none;
@@ -290,5 +296,41 @@
         }
       }
     }
+  }
+}
+
+@keyframes pop-up {
+  0% {
+    transform: translateY(110%);
+  }
+  35% {
+    transform: translateY(110%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes show-up {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes overflow {
+  0% {
+    overflow: hidden;
+  }
+  99.99% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: visible;
   }
 }

@@ -6,6 +6,7 @@
   top: 0;
   transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
   z-index: 100;
+  animation: slide-left 1s ease-in-out;
 
   &.isScrolled {
     background-color: $light;
@@ -147,5 +148,14 @@
         display: none;
       }
     }
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(-200vh);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

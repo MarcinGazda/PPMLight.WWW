@@ -42,6 +42,7 @@
     padding-inline: 2rem;
     max-width: 46.875rem;
     color: $dark;
+    animation: shaking 1s;
 
     @include breakpoint(md) {
       font-size: 2.4rem;
@@ -60,14 +61,32 @@
     line-height: 1.9rem;
     padding-inline: 1.3rem;
     margin-bottom: 3rem;
+    animation: shaking 1s;
   }
 
   .wrapper {
     @include breakpoint(lg) {
       display: grid;
       justify-content: center;
-      //grid-template-columns: repeat(2, 587px); //470
       grid-template-columns: repeat(2, minmax(460px, 587px)); //470
     }
+  }
+}
+
+@keyframes shaking {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(5px, 5px) rotate(5deg);
+  }
+  50% {
+    transform: translate(0, 0) rotate(0eg);
+  }
+  75% {
+    transform: translate(-5px, 5px) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
   }
 }
