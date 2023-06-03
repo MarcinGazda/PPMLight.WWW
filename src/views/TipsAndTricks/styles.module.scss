@@ -1,0 +1,143 @@
+@use "../../assets/variables.scss" as *;
+
+.container {
+  margin-bottom: 6rem;
+
+  @include breakpoint(lg) {
+    display: flex;
+    flex-direction: row;
+    max-width: 73.125rem;
+    margin-inline: auto;
+  }
+
+  &.reverse {
+    @include breakpoint(lg) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .text {
+    @include breakpoint(lg) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+    &.width {
+      max-width: 100%;
+      flex: 1 1 0;
+    }
+
+    .title {
+      margin-right: auto;
+      font-size: 1.5rem;
+      text-align: left;
+      font-weight: 400;
+      padding-inline: 1.3rem;
+      color: $gray;
+
+      @include breakpoint(md) {
+        font-size: 2.4rem;
+        line-height: 3rem;
+      }
+
+      &.nonMargin {
+        padding: 0;
+        margin: 0;
+
+        &.small {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    .description {
+      margin-right: auto;
+      font-size: 1rem;
+      text-align: left;
+      font-weight: 400;
+      color: $text-gray;
+      line-height: 1.9rem;
+      padding-inline: 1.3rem;
+      margin-bottom: 2rem;
+
+      &.nonMargin {
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      padding-inline: 1.3rem;
+    }
+
+    li {
+      color: $gray;
+      display: flex;
+      align-items: center;
+      padding-bottom: 0.8rem;
+
+      span {
+        text-justify: auto;
+        padding-left: 1rem;
+        font-weight: 400;
+      }
+
+      .icon {
+        color: $orange;
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+    }
+  }
+
+  .imgWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint(lg) {
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin-right: 4rem;
+    }
+
+    .img {
+      max-width: 100%;
+      max-height: 586px;
+      transform: translateY(-2rem);
+    }
+
+    .background {
+      position: absolute;
+      right: 0;
+      top: -40px;
+      z-index: -1;
+      rotate: 180deg;
+      opacity: 0.5;
+      animation: bounces 2s infinite alternate;
+      width: 30rem;
+
+      @include breakpoint(s) {
+        width: 50rem;
+      }
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    .media {
+      width: 100px;
+      height: 100px;
+      margin: 0 1.5rem 2.5rem 1.3rem;
+    }
+  }
+}
+
+@keyframes bounces {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-25px);
+  }
+}
