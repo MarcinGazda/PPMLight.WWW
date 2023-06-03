@@ -90,16 +90,14 @@
         font-weight: 400;
         font-size: 29px;
         margin-bottom: 0;
-        color: $dark;
+        color: $gray;
         @include breakpoint(md) {
           max-width: none;
-          line-height: 44px;
           font-size: 30px;
           width: 464px;
-          height: 160px;
           font-size: 50px;
           text-align: start;
-          line-height: 80px;
+          line-height: 60px;
           margin: 0;
         }
 
@@ -146,6 +144,7 @@
           font-size: 16px;
           line-height: 28px;
           margin: 30px 0;
+          margin-top: 15px;
         }
 
         &::before {

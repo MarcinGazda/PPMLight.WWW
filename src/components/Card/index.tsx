@@ -25,6 +25,7 @@ const Card = (props: props) => {
   return (
     <div
       data-aos="fade-up"
+      data-aos-once="true"
       className={`${styles.card} ${
         props?.color === Color.Green ? styles.green : ""
       }${props?.color === Color.Gray ? styles.gray : ""}`}

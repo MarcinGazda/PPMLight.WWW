@@ -9,7 +9,6 @@
   margin-inline: 1rem;
   background: $light;
   transition: all 0.5s ease-in-out;
-  //animation: show-up 1s ease-in-out;
 
   &::before {
     border-radius: 4px;
@@ -86,6 +85,7 @@
 
   .text {
     .title {
+      transition: color 0.6s ease-in-out;
       font-size: 1.3rem;
       font-weight: 400;
 
@@ -95,13 +95,12 @@
     }
 
     .description {
-      transition: color 0.5s ease-in-out;
       color: $text-gray;
+      transition: color 0.5s ease-in-out;
     }
   }
 
   &:hover {
-    color: white;
     background: transparent;
     box-shadow: 0 10px 20px 0 #fddb9b;
 
@@ -109,8 +108,12 @@
       opacity: 1;
     }
 
+    .text {
+      color: $light;
+    }
+
     .description {
-      color: white;
+      color: $light;
     }
 
     &::before {
@@ -128,15 +131,5 @@
 .green {
   svg {
     fill: $green;
-  }
-}
-
-@keyframes show-up {
-  0% {
-    transform: translateY(150%);
-  }
-
-  100% {
-    transform: translateY(0);
   }
 }

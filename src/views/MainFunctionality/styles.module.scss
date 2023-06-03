@@ -2,6 +2,7 @@
 
 .container {
   position: relative;
+  margin-bottom: 8rem;
 
   .background {
     position: absolute;
@@ -34,14 +35,13 @@
   }
 
   .title {
-    width: fit-content;
     margin-inline: auto;
     font-size: 1.5rem;
     text-align: center;
     font-weight: 400;
     padding-inline: 2rem;
     max-width: 46.875rem;
-    color: $dark;
+    color: $gray;
     animation: shaking 1s;
 
     @include breakpoint(md) {
@@ -51,7 +51,6 @@
   }
 
   .description {
-    width: fit-content;
     max-width: 46.875rem;
     margin-inline: auto;
     font-size: 1rem;

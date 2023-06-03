@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-import HeroImg from "../../assets/hero.png";
+import HeroImg from "../../assets/images/hero.png";
 import facebook from "../../assets/icons/facebook.png";
 import twitter from "../../assets/icons/twitter.png";
 import instagram from "../../assets/icons/instagram.png";
@@ -52,7 +52,7 @@ const Hero = () => {
           <div className={styles.text}>
             <h1
               className={styles.title}
-            >{`The biggest platform\nfor your growth.`}</h1>
+            >{`Where PPM Presentations Meet Simplicity and Impact`}</h1>
             <p
               className={styles.description}
             >{`There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.`}</p>

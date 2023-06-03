@@ -47,10 +47,14 @@ const MainFunctionality = () => {
   return (
     <section className={styles.container}>
       <img className={styles.background} src={backgroundImg} alt="" />
-      <h2 data-aos="slide-left" className={styles.title}>
+      <h2 data-aos="slide-left" data-aos-once="true" className={styles.title}>
         How Does Sofbox Work?
       </h2>
-      <p data-aos="slide-right" className={styles.description}>
+      <p
+        data-aos="slide-right"
+        data-aos-once="true"
+        className={styles.description}
+      >
         If you are planning on developing a product landing app or website, take
         a look at this beatiful-crafted
       </p>
