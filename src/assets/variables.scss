@@ -29,11 +29,13 @@ $headerHeight: 52px;
   }
   @if $point == md {
     @media (min-width: 48em) {
+      //768px
       @content;
     }
   }
   @if $point == lg {
     @media (min-width: 62rem) {
+      //992px
       @content;
     }
   }

@@ -3,8 +3,8 @@ import Header from "./views/Header";
 import Hero from "./views/Hero";
 import MainFunctionality from "./views/MainFunctionality";
 import TipsAndTricks from "./views/TipsAndTricks/Index";
-import MockupContent from "./views/MockupContent";
 import CaseStudies from "./views/CaseStudies";
+import Footer from "./views/Footer";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <MainFunctionality />
       <TipsAndTricks />
       <CaseStudies />
-      <MockupContent />
+      <Footer />
     </>
   );
 }
