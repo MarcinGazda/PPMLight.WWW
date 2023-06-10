@@ -4,25 +4,28 @@ import "slick-carousel/slick/slick-theme.css";
 
 type Props = {
   slide: Array<React.ReactNode>;
+  oneSlideToShow?: boolean;
 };
 
 const MySlider = (props: Props) => {
   const settings = {
     infinite: true,
     speed: 300,
-    slidesToShow: 3,
+    slidesToShow: props.oneSlideToShow === undefined ? 3 : 1,
     slidesToScroll: 1,
-    autoplay: true,
+    nautoplay: true,
     autoplaySpeed: 3000,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1000,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: props.oneSlideToShow === undefined ? 2 : 1,
           slidesToScroll: 1,
           infinite: true,
           autoplay: true,
           autoplaySpeed: 3000,
+          arrows: false,
         },
       },
       {
@@ -33,6 +36,7 @@ const MySlider = (props: Props) => {
           infinite: true,
           autoplay: true,
           autoplaySpeed: 3000,
+          arrows: false,
         },
       },
     ],
