@@ -41,7 +41,6 @@ const Card = (props: props) => {
       </div>
       <div className={styles.text}>
         <h3 className={styles.title}>{props.title}</h3>
-        <p className={styles.description}>{props.description}</p>
       </div>
     </div>
   );

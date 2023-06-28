@@ -10,27 +10,28 @@ import Aos from "aos";
 const MAIN_FUNCTIONALITY = [
   {
     svg: <Test />,
-    title: "Customized Invoices",
+    title: "A simple and clear presentation of Project and Program Statuses.",
     description:
-      "There are many variations of passages of Lorem Ipsum available.",
+      "A simple and clear presentation of Project and Program Statuses.",
   },
   {
     svg: <Test />,
-    title: "Customized Invoices",
-    description:
-      "There are many variations of passages of Lorem Ipsum available.",
-    color: Color.Green,
-  },
-  {
-    svg: <Test />,
-    title: "Customized Invoices",
+    title:
+      "Creation and management of Project and Program Portfolios within the Jira environment.",
     description:
       "There are many variations of passages of Lorem Ipsum available.",
     color: Color.Green,
   },
   {
     svg: <Test />,
-    title: "Customized Invoices",
+    title: "Intuitive and easy content management within the Project Card.",
+    description:
+      "There are many variations of passages of Lorem Ipsum available.",
+    color: Color.Green,
+  },
+  {
+    svg: <Test />,
+    title: "Keeping a history of Reports in one place.",
     description:
       "There are many variations of passages of Lorem Ipsum available.",
   },
@@ -48,16 +49,9 @@ const MainFunctionality = () => {
     <section className={styles.container}>
       <img className={styles.background} src={backgroundImg} alt="" />
       <h2 data-aos="slide-left" data-aos-once="true" className={styles.title}>
-        How Does Sofbox Work?
+        How Does PPMlight Work?
       </h2>
-      <p
-        data-aos="slide-right"
-        data-aos-once="true"
-        className={styles.description}
-      >
-        If you are planning on developing a product landing app or website, take
-        a look at this beatiful-crafted
-      </p>
+
       <div className={styles.wrapper}>
         {MAIN_FUNCTIONALITY.map((data, index) => (
           <Card
