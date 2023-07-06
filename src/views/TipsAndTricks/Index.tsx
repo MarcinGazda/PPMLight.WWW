@@ -50,14 +50,14 @@ const TipsAndTricks = () => {
     };
   }, []);
 
-  const tipsElements = TIPS.map((tips, index) => (
-    <li data-aos="fade-up" data-aos-once="true" key={index}>
-      <IconContext.Provider value={{ className: styles.icon }}>
-        <MdDone />
-      </IconContext.Provider>
-      <span>{tips}</span>
-    </li>
-  ));
+  // const tipsElements = TIPS.map((tips, index) => (
+  //   <li data-aos="fade-up" data-aos-once="true" key={index}>
+  //     <IconContext.Provider value={{ className: styles.icon }}>
+  //       <MdDone />
+  //     </IconContext.Provider>
+  //     <span>{tips}</span>
+  //   </li>
+  // ));
 
   const tricksElements = (data: Array<any>) => {
     return (
