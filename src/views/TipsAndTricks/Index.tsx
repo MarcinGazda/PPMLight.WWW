@@ -1,6 +1,6 @@
-import { IconContext } from "react-icons";
+// import { IconContext } from "react-icons";
 import styles from "./styles.module.scss";
-import { MdDone } from "react-icons/md";
+// import { MdDone } from "react-icons/md";
 import tipsImg from "../../assets/images/tips.png";
 import tips2Img from "../../assets/images/tips2.png";
 import backgroundImg from "../../assets/background/background-1.png";
@@ -10,7 +10,7 @@ import "aos/dist/aos.css";
 import Aos from "aos";
 import { useEffect } from "react";
 
-const TIPS = ["Boost SEO ranking", "Marketing", "Visual Reviews"];
+// const TIPS = ["Boost SEO ranking", "Marketing", "Visual Reviews"];
 
 const TRICKS = [
   {
