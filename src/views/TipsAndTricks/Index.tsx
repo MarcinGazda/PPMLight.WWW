@@ -15,15 +15,30 @@ const TIPS = ["Boost SEO ranking", "Marketing", "Visual Reviews"];
 const TRICKS = [
   {
     img: shield,
-    title: "Virtual Card",
+    title: "The Project Card",
     description:
-      "There are many variations of passages of Lorem Ipsum available",
+      "Created by practitioners - a single place for key project data.",
   },
   {
     img: card,
-    title: "Buyer Protection",
+    title: "The Reports tab",
     description:
-      "There are many variations of passages of Lorem Ipsum available",
+      "Allows for checking historical information during the project's progress.",
+  },
+];
+
+const TRICKS2 = [
+  {
+    img: shield,
+    title: "Single button",
+    description:
+      "You can present the current project status with key project data.",
+  },
+  {
+    img: card,
+    title: "Notes",
+    description:
+      "In the Project Card A useful place for support the manager during presentations",
   },
 ];
 
@@ -44,36 +59,44 @@ const TipsAndTricks = () => {
     </li>
   ));
 
-  const tricksElements = TRICKS.map((trick, index) => (
-    <div
-      data-aos="fade-up"
-      data-aos-once="true"
-      key={index}
-      className={styles.wrapper}
-    >
-      <img className={styles.media} src={trick.img} alt="" />
-      <div className={`${styles.text} ${styles.width}`}>
-        <h3 className={`${styles.title} ${styles.nonMargin} ${styles.small}`}>
-          {trick.title}
-        </h3>
-        <p className={`${styles.description} ${styles.nonMargin}`}>
-          {trick.description}
-        </p>
-      </div>
-    </div>
-  ));
+  const tricksElements = (data: Array<any>) => {
+    return (
+      <>
+        {data.map((trick, index) => (
+          <div
+            data-aos="fade-up"
+            data-aos-once="true"
+            key={index}
+            className={styles.wrapper}
+          >
+            <img className={styles.media} src={trick.img} alt="" />
+            <div className={`${styles.text} ${styles.width}`}>
+              <h3 className={`${styles.title} ${styles.nonMargin} ${styles.small}`}>
+                {trick.title}
+              </h3>
+              <p className={`${styles.description} ${styles.nonMargin}`}>
+                {trick.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </>
+    )
+  };
+
   return (
     <section>
       <div className={styles.container}>
         <div className={styles.text}>
           <h2 className={styles.title}>
-            Get tips & tricks on how to skyroket your sales.
+            What sets us apart are our unique features.
           </h2>
           <p className={styles.description}>
             faff about only a quid blower I down't want no agro bleeding chimney
             pot burke tosser cras nice one boot fanny.!
           </p>
-          <ul>{tipsElements}</ul>
+          {/* <ul>{tipsElements}</ul> */}
+          {tricksElements(TRICKS)}
         </div>
         <div data-aos="fade" data-aos-once="true" className={styles.imgWrapper}>
           <img className={styles.img} src={tipsImg} alt="" />
@@ -81,14 +104,14 @@ const TipsAndTricks = () => {
       </div>
       <div className={`${styles.container} ${styles.reverse}`}>
         <div className={styles.text}>
-          <h2 className={styles.title}>
-            Get tips & tricks on how to skyroket your sales.
-          </h2>
-          <p className={styles.description}>
+          {/* <h2 className={styles.title}>
+            What sets us apart are our unique features.
+          </h2> */}
+          {/* <p className={styles.description}>
             faff about only a quid blower I down't want no agro bleeding chimney
             pot burke tosser cras nice one boot fanny.!
-          </p>
-          {tricksElements}
+          </p> */}
+          {tricksElements(TRICKS2)}
         </div>
         <div data-aos="fade" data-aos-once="true" className={styles.imgWrapper}>
           <img className={styles.img} src={tips2Img} alt="" />
