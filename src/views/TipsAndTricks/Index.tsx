@@ -89,12 +89,12 @@ const TipsAndTricks = () => {
       <div className={styles.container}>
         <div className={styles.text}>
           <h2 className={styles.title}>
-            What sets us apart are our unique features.
+            What sets us apart
           </h2>
-          <p className={styles.description}>
+          {/* <p className={styles.description}>
             faff about only a quid blower I down't want no agro bleeding chimney
             pot burke tosser cras nice one boot fanny.!
-          </p>
+          </p> */}
           {/* <ul>{tipsElements}</ul> */}
           {tricksElements(TRICKS)}
         </div>
@@ -104,9 +104,9 @@ const TipsAndTricks = () => {
       </div>
       <div className={`${styles.container} ${styles.reverse}`}>
         <div className={styles.text}>
-          {/* <h2 className={styles.title}>
-            What sets us apart are our unique features.
-          </h2> */}
+          <h2 className={styles.title}>
+            Our unique features
+          </h2>
           {/* <p className={styles.description}>
             faff about only a quid blower I down't want no agro bleeding chimney
             pot burke tosser cras nice one boot fanny.!
