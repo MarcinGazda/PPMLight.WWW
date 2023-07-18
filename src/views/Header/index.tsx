@@ -73,7 +73,7 @@ const Header = () => {
               <a>Pricing</a>
             </li>
             <li>
-              <a>About us</a>
+              <a>Contact us</a>
             </li>
           </ul>
         </nav>
