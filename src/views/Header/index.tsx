@@ -73,10 +73,19 @@ const Header = () => {
               <a>Pricing</a>
             </li>
             <li>
+              <a>FAQ</a>
+            </li>
+            <li>
               <a>Contact us</a>
+            </li>
+            <li>
+              <a href="/" className={styles.subBtn}>
+                Marketplace
+              </a>
             </li>
           </ul>
         </nav>
+
         <div className={styles.header__content__toggle}>
           {!menuOpen ? (
             <FaBars onClick={menuToggleHandler} />

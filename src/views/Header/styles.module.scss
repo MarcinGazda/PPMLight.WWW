@@ -97,7 +97,7 @@
             color: $orange;
           }
 
-          &::before {
+          &:not(:last-child)::before {
             content: "";
             text-decoration: underline;
             bottom: 10%;
@@ -113,6 +113,31 @@
             width: calc(100% - 2rem);
             background-color: $orange;
           }
+        }
+      }
+
+      .subBtn {
+        padding: 12px 25px;
+        text-decoration: none;
+        border-color: $light;
+        border-style: none;
+        border-radius: 4px;
+        color: $light;
+        font-weight: 400;
+        background: linear-gradient(
+          90deg,
+          rgb(250, 181, 54) 0%,
+          rgb(246, 200, 113) 100%
+        );
+        filter: blur(0px) grayscale(0%) brightness(100%);
+
+        &:hover {
+          filter: blur(0px) grayscale(0%) brightness(120%);
+          background: linear-gradient(
+            90deg,
+            rgb(246, 200, 113) 100% rgb(250, 181, 54) 0%
+          );
+          cursor: pointer;
         }
       }
 
