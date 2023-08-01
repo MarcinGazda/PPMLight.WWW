@@ -5,6 +5,7 @@ import MainFunctionality from "./views/MainFunctionality";
 import TipsAndTricks from "./views/TipsAndTricks/Index";
 import CaseStudies from "./views/CaseStudies";
 import Footer from "./views/Footer";
+import Pricing from "./views/Pricing";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Hero />
       <MainFunctionality />
       <TipsAndTricks />
+      <Pricing />
       <CaseStudies />
       <Footer />
     </>
