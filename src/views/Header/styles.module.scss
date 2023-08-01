@@ -130,6 +130,7 @@
           rgb(246, 200, 113) 100%
         );
         filter: blur(0px) grayscale(0%) brightness(100%);
+        transition: all 0.5s ease-in-out;
 
         &:hover {
           filter: blur(0px) grayscale(0%) brightness(120%);
