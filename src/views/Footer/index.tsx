@@ -32,6 +32,17 @@ const REVIEWS = [
   },
 ];
 
+const companyDetails = [
+  "AGILEME SP. Z O. O.",
+  "ul. Innowacyjna 1",
+  "16-400",
+  "Suwałki",
+  "Poland",
+  "REGON: 369680813",
+  "NIP: 8442361905",
+  "KRS: 0000722436",
+];
+
 const Footer = () => {
   const menuList = MENU_ITEMS.map((item) => <li key={item}>{item}</li>);
 
@@ -47,16 +58,19 @@ const Footer = () => {
     />
   ));
 
+  const CompanyDetails = companyDetails.map((detail) => (
+    <p className={styles.compDescription}>{detail}</p>
+  ));
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.footerTop}>
           <div className={styles.subscribeWrapper}>
             <div className={styles.subText}>
-              <h4 className={styles.subTitle}>Ready to get started?</h4>
+              <h4 className={styles.subTitle}>Contact Form</h4>
               <p className={styles.subDescription}>
-                It is a long established fact that a page when looking at its
-                layout.
+                If You have any question write to us!
               </p>
             </div>
             <div className={styles.inputWrapper}>
@@ -68,6 +82,18 @@ const Footer = () => {
               <a href="/" className={styles.subBtn}>
                 Sign up
               </a>
+              <input type="text" placeholder="Topic" className={styles.input} />
+              <input
+                type="text"
+                placeholder="Message"
+                className={styles.input}
+              />
+              <div className={styles.rodo}>
+                <span className={styles.text}>
+                  Zgoda na podanie danych osobowych
+                </span>
+                <input type="checkbox" className={styles.checkbox} />
+              </div>
             </div>
           </div>
         </div>
@@ -77,10 +103,7 @@ const Footer = () => {
               <a href="/">
                 <img src={Logo} alt="logoPPMlight" className={styles.logoImg} />
               </a>
-              <p className={styles.compDescription}>
-                Is is a long established fact that a reader will be distracted
-                by the readable content.
-              </p>
+              {CompanyDetails}
               <p className={styles.copyright}>Copyright @ 2023 Sofbox</p>
             </div>
           </div>

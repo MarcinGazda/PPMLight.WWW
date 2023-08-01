@@ -185,6 +185,7 @@
             border: 1px solid #eff1fe;
             font-size: 14px;
             font-weight: 400;
+            margin-bottom: 1rem;
 
             &:hover {
               border: 2px solid $orange;
@@ -192,6 +193,13 @@
 
             &:focus {
               border: 2px solid $orange;
+            }
+          }
+
+          .rodo {
+            .text {
+            }
+            .span {
             }
           }
 
@@ -210,8 +218,12 @@
             transition: all 0.5s ease-in-out;
 
             &:hover {
-              background: #1e1e1e;
-              color: #fff;
+              filter: blur(0px) grayscale(0%) brightness(120%);
+              background: linear-gradient(
+                90deg,
+                rgb(246, 200, 113) 100% rgb(250, 181, 54) 0%
+              );
+              cursor: pointer;
             }
           }
         }
@@ -245,6 +257,7 @@
 
         .compDescription {
           padding-right: 3rem;
+          margin-block: 0.5rem;
         }
 
         .copyright {
