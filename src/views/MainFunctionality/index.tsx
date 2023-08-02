@@ -10,28 +10,27 @@ import Aos from "aos";
 const MAIN_FUNCTIONALITY = [
   {
     svg: <Test />,
-    title: "A simple and clear presentation of Project and Program Statuses.",
+    title: "Customized Invoices",
     description:
-      "A simple and clear presentation of Project and Program Statuses.",
+      "There are many variations of passages of Lorem Ipsum available.",
   },
   {
     svg: <Test />,
-    title:
-      "Creation and management of Project and Program Portfolios within the Jira environment.",
+    title: "Customized Invoices",
     description:
       "There are many variations of passages of Lorem Ipsum available.",
     color: Color.Green,
   },
   {
     svg: <Test />,
-    title: "Intuitive and easy content management within the Project Card.",
+    title: "Customized Invoices",
     description:
       "There are many variations of passages of Lorem Ipsum available.",
     color: Color.Green,
   },
   {
     svg: <Test />,
-    title: "Keeping a history of Reports in one place.",
+    title: "Customized Invoices",
     description:
       "There are many variations of passages of Lorem Ipsum available.",
   },
@@ -49,9 +48,16 @@ const MainFunctionality = () => {
     <section className={styles.container}>
       <img className={styles.background} src={backgroundImg} alt="" />
       <h2 data-aos="slide-left" data-aos-once="true" className={styles.title}>
-        How Does PPMlight Work?
+        How Does Sofbox Work?
       </h2>
-
+      <p
+        data-aos="slide-right"
+        data-aos-once="true"
+        className={styles.description}
+      >
+        If you are planning on developing a product landing app or website, take
+        a look at this beatiful-crafted
+      </p>
       <div className={styles.wrapper}>
         {MAIN_FUNCTIONALITY.map((data, index) => (
           <Card
