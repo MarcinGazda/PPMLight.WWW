@@ -19,7 +19,7 @@ const Pricing = () => {
       <div className={styles.header}>
         <p className={styles.title}>{price.title}</p>
         <p className={styles.price}>
-          {price.price}€<span className={styles.month}>/mo</span>
+          {price.price}€<span className={styles.month}>/monthly</span>
         </p>
       </div>
       <div className={styles.main}>
@@ -48,7 +48,7 @@ const Pricing = () => {
             </li>
           ))}
         </ul>
-        <button className={styles.btnSignUp}>Sign up</button>
+        <button className={styles.btnSignUp}>Get started</button>
       </div>
     </div>
   ));
@@ -59,8 +59,7 @@ const Pricing = () => {
         <div className={styles.wrapper}>
           <h1 className={styles.title}>Pricing</h1>
           <p className={styles.description}>
-            Sunt suscipit eaque qui iure unde labore numquam iusto alias
-            explicabo, pariatur ipsam, cupiditate aliquid modi?
+            Get the package you need and upgrade as you grow.
           </p>
           <div>
             <button className={styles.btnMonthLeft}>Monthly</button>
