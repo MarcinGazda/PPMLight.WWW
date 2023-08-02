@@ -5,7 +5,7 @@ import avatar from "../../assets/images/footer-img.jpeg";
 import avatar1 from "../../assets/images/footer-img1.jpeg";
 import Slider from "../../components/Slider";
 
-const MENU_ITEMS = ["About Us", "Theme", "Features", "Pricing", "Blog"];
+const MENU_ITEMS = ["Home", "Features", "Pricing", "FAQ", "Contact us"];
 
 const ABOUT_US_ITEMS = [
   "About PPMlight",
@@ -103,21 +103,22 @@ const Footer = () => {
               <a href="/">
                 <img src={Logo} alt="logoPPMlight" className={styles.logoImg} />
               </a>
+
               {CompanyDetails}
-              <p className={styles.copyright}>Copyright @ 2023 Sofbox</p>
+              {/* <p className={styles.copyright}>Copyright @ 2023 Sofbox</p> */}
             </div>
           </div>
           <div className={styles.menu}>
             <h5>Menu</h5>
             <ul>{menuList}</ul>
           </div>
-          <div className={styles.aboutUs}>
+          {/* <div className={styles.aboutUs}>
             <h5>About Us</h5>
             <ul>{aboutUsList}</ul>
-          </div>
-          <div className={styles.reviews}>
+          </div> */}
+          {/* <div className={styles.reviews}>
             <Slider slide={reviewsCard} oneSlideToShow={true} />
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
