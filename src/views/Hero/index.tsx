@@ -52,11 +52,12 @@ const Hero = () => {
           <div className={styles.text}>
             <h1
               className={styles.title}
-            >{`Where PPM Presentations Meet Simplicity and Impact`}</h1>
+            >{`Find the solution where your PPM Presentations meets simplicity and briefness.`}</h1>
             <p
               className={styles.description}
-            >{`There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.`}</p>
-            <button className={styles.button}>Read More</button>
+            >{`Experience the perfect balance between the maximum efficiency and minimal chaos. PPMLight - 
+            a reliable solution that sees to your project reviews being executed flawlessly, whilst eliminating the distractions .`}</p>
+            <button className={styles.button}>Marketplace</button>
           </div>
           <div className={styles.imgWrapper}>
             <img className={styles.img} src={HeroImg} alt="" />

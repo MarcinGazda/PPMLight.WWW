@@ -17,28 +17,25 @@ const TRICKS = [
     img: shield,
     title: "The Project Card",
     description:
-      "Created by practitioners - a single place for key project data.",
+      "Created by practitioners - a single space for key project data.",
   },
   {
     img: card,
-    title: "The Reports tab",
-    description:
-      "Allows for checking historical information during the project's progress.",
+    title: "The Reports Tab",
+    description: "Get progress insights based on project history.",
   },
 ];
 
 const TRICKS2 = [
   {
     img: shield,
-    title: "Single button",
-    description:
-      "You can present the current project status with key project data.",
+    title: "Magic Button",
+    description: "One click required to present current project status",
   },
   {
     img: card,
     title: "Notes",
-    description:
-      "In the Project Card A useful place for support the manager during presentations",
+    description: "Collect stakeholders notes during a presentation.",
   },
 ];
 
@@ -71,7 +68,9 @@ const TipsAndTricks = () => {
           >
             <img className={styles.media} src={trick.img} alt="" />
             <div className={`${styles.text} ${styles.width}`}>
-              <h3 className={`${styles.title} ${styles.nonMargin} ${styles.small}`}>
+              <h3
+                className={`${styles.title} ${styles.nonMargin} ${styles.small}`}
+              >
                 {trick.title}
               </h3>
               <p className={`${styles.description} ${styles.nonMargin}`}>
@@ -81,16 +80,14 @@ const TipsAndTricks = () => {
           </div>
         ))}
       </>
-    )
+    );
   };
 
   return (
     <section>
       <div className={styles.container}>
         <div className={styles.text}>
-          <h2 className={styles.title}>
-            What sets us apart
-          </h2>
+          <h2 className={styles.title}>Our stand outs</h2>
           {/* <p className={styles.description}>
             faff about only a quid blower I down't want no agro bleeding chimney
             pot burke tosser cras nice one boot fanny.!
@@ -104,9 +101,7 @@ const TipsAndTricks = () => {
       </div>
       <div className={`${styles.container} ${styles.reverse}`}>
         <div className={styles.text}>
-          <h2 className={styles.title}>
-            Our unique features
-          </h2>
+          {/* <h2 className={styles.title}>Our unique features</h2> */}
           {/* <p className={styles.description}>
             faff about only a quid blower I down't want no agro bleeding chimney
             pot burke tosser cras nice one boot fanny.!

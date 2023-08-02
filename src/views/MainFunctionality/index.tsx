@@ -10,29 +10,26 @@ import Aos from "aos";
 const MAIN_FUNCTIONALITY = [
   {
     svg: <Test />,
-    title: "Customized Invoices",
-    description:
-      "There are many variations of passages of Lorem Ipsum available.",
+    title: "Project and Program Statuses",
+    description: "A simple and clear presentation.",
   },
   {
     svg: <Test />,
-    title: "Customized Invoices",
-    description:
-      "There are many variations of passages of Lorem Ipsum available.",
+    title: "Project Card",
+    description: "User friendly content management.",
     color: Color.Green,
   },
   {
     svg: <Test />,
-    title: "Customized Invoices",
+    title: "Jira Environment",
     description:
-      "There are many variations of passages of Lorem Ipsum available.",
+      "The ability to download data to manage projects and programs portfolio",
     color: Color.Green,
   },
   {
     svg: <Test />,
-    title: "Customized Invoices",
-    description:
-      "There are many variations of passages of Lorem Ipsum available.",
+    title: "Report Archive",
+    description: "All previous reports in one place.",
   },
 ];
 
