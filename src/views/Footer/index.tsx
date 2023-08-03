@@ -46,7 +46,7 @@ const Footer = () => {
                 className={styles.input}
               />
               <span className={styles.text}>
-                Zgoda na podanie danych osobowych
+                Consent to provide personal data{" "}
               </span>
               <input type="checkbox" className={styles.checkbox} />
             </div>
