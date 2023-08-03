@@ -3,7 +3,7 @@ import Header from "./views/Header";
 import Hero from "./views/Hero";
 import MainFunctionality from "./views/MainFunctionality";
 import TipsAndTricks from "./views/TipsAndTricks/Index";
-import CaseStudies from "./views/CaseStudies";
+import FAQ from "./views/FAQ";
 import Footer from "./views/Footer";
 import Pricing from "./views/Pricing";
 
@@ -15,7 +15,7 @@ function App() {
       <MainFunctionality />
       <TipsAndTricks />
       <Pricing />
-      <CaseStudies />
+      <FAQ />
       <Footer />
     </>
   );
