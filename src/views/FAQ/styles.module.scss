@@ -66,26 +66,49 @@
     }
 
     p {
-      margin: 0;
-      padding: 0;
+      margin-bottom: 0;
     }
-    .card {
+    // .card {
+    //   border: $orange 1px solid;
+    //   border-radius: 0.5rem;
+
+    //   .question {
+    //     padding: 1.5rem 1rem;
+    //     outline-style: none;
+    //     cursor: pointer;
+    //     font-weight: 600;
+    //     transition: margin 0.3s ease-in-out;
+    //   }
+
+    //   .answer {
+    //     padding: 0 1rem 1.5rem 1rem;
+    //     margin-left: 1rem;
+    //     margin-top: -1rem;
+    //     margin-bottom: 10px;
+    //   }
+    //   details[open] {
+    //     margin-bottom: 10px;
+    //   }
+    // }
+
+    details.card {
+      padding: 1rem;
       border: $orange 1px solid;
       border-radius: 0.5rem;
-      white-space: pre-wrap;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease-in-out;
+      max-height: 69px;
+      overflow: hidden;
 
       .question {
-        padding: 1.5rem 1rem;
-        outline-style: none;
+        outline: none;
         cursor: pointer;
         font-weight: 600;
       }
 
-      .answer {
-        padding: 0 1rem 1.5rem 1rem;
-        margin-left: 1rem;
-        margin-top: -1rem;
-        //color: $orange;
+      &[open] {
+        padding-bottom: 1rem;
+        max-height: 500px;
       }
     }
   }
