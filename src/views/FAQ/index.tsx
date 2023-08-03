@@ -72,8 +72,8 @@ const data = [
 ];
 
 const FAQ = () => {
-  const faq = data.map((data) => (
-    <details className={styles.card}>
+  const faq = data.map((data, index) => (
+    <details key={index} className={`${styles.card}`}>
       <summary className={styles.question}>{data.title} </summary>
       <div className={styles.answer}>
         <p>{data.content}</p>
