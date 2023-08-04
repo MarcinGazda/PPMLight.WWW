@@ -65,9 +65,6 @@
       padding-right: 8rem;
     }
 
-    p {
-      margin-bottom: 0;
-    }
     // .card {
     //   border: $orange 1px solid;
     //   border-radius: 0.5rem;
@@ -91,25 +88,49 @@
     //   }
     // }
 
-    details.card {
-      padding: 1rem;
+    .card {
+      // padding: 1rem;
       border: $orange 1px solid;
       border-radius: 0.5rem;
-      margin-bottom: 1rem;
-      transition: all 0.3s ease-in-out;
-      max-height: 69px;
-      overflow: hidden;
 
-      .question {
-        outline: none;
-        cursor: pointer;
-        font-weight: 600;
+      li {
+        margin-bottom: 0.5rem;
       }
 
-      &[open] {
-        padding-bottom: 1rem;
-        max-height: 500px;
+      p {
+        margin: 0;
+        padding: 0;
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+        font-size: 1rem;
       }
+
+      span {
+        font-weight: 700;
+        color: $gray;
+        font-size: 1rem;
+      }
+
+      div {
+        font-size: 1rem;
+        line-height: 28px;
+        color: $gray;
+      }
+      // margin-bottom: 1rem;
+      // transition: all 0.3s ease-in-out;
+      // max-height: 69px;
+      // overflow: hidden;
+
+      // .question {
+      //   outline: none;
+      //   cursor: pointer;
+      //   font-weight: 600;
+      // }
+
+      // &[open] {
+      //   padding-bottom: 1rem;
+      //   max-height: 500px;
+      // }
     }
   }
 }
