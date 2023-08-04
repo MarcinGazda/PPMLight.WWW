@@ -13,10 +13,12 @@ const companyDetails = [
 ];
 
 const Footer = () => {
-  const menuList = MENU_ITEMS.map((item) => <li key={item}>{item}</li>);
+  const menuList = MENU_ITEMS.map((item, index) => <li key={index}>{item}</li>);
 
-  const CompanyDetails = companyDetails.map((detail) => (
-    <p className={styles.compDescription}>{detail}</p>
+  const CompanyDetails = companyDetails.map((detail, index) => (
+    <p key={index} className={styles.compDescription}>
+      {detail}
+    </p>
   ));
 
   return (

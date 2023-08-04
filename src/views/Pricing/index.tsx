@@ -14,8 +14,8 @@ const prices = [
 
 //Paid subscription begins after your free trial.
 const Pricing = () => {
-  const Price = prices.map((price) => (
-    <div className={styles.card}>
+  const Price = prices.map((price, index) => (
+    <div className={styles.card} key={index + 50}>
       <div className={styles.header}>
         <p className={styles.title}>{price.title}</p>
         <p className={styles.price}>
@@ -24,8 +24,8 @@ const Pricing = () => {
       </div>
       <div className={styles.main}>
         <ul className={styles.ulist}>
-          {price.points.map((point) => (
-            <li className={styles.list}>
+          {price.points.map((point, index) => (
+            <li className={styles.list} key={index}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
