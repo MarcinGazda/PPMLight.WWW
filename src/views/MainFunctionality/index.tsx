@@ -45,7 +45,7 @@ const MainFunctionality = () => {
     <section className={styles.container}>
       <img className={styles.background} src={backgroundImg} alt="" />
       <h2 data-aos="slide-left" data-aos-once="true" className={styles.title}>
-        How Does Sofbox Work?
+        How Does PPMlight Work?
       </h2>
       <p
         data-aos="slide-right"
