@@ -1,5 +1,8 @@
 import styles from "./index.module.scss";
 import Logo from "../../assets/logoPPMLight.svg";
+import { Input } from "antd";
+
+const { TextArea } = Input;
 
 const MENU_ITEMS = ["Home", "Features", "Pricing", "FAQ", "Contact us"];
 
@@ -38,19 +41,23 @@ const Footer = () => {
                 placeholder="Your Email"
                 className={styles.input}
               />
-              <a href="/" className={styles.subBtn}>
-                Sign up
-              </a>
+
               <input type="text" placeholder="Topic" className={styles.input} />
-              <input
-                type="text"
+
+              <TextArea
                 placeholder="Message"
                 className={styles.input}
+                autoSize={{ minRows: 4, maxRows: 100 }}
               />
-              <span className={styles.text}>
-                Consent to provide personal data{" "}
-              </span>
-              <input type="checkbox" className={styles.checkbox} />
+              <div className={styles.row}>
+                <div className={styles.wrapperRodo}>
+                  <span className={styles.text}>
+                    Consent to provide personal data{" "}
+                  </span>
+                  <input type="checkbox" className={styles.checkbox} />
+                </div>
+                <button className={styles.subBtn}>Send</button>
+              </div>
             </div>
           </div>
         </div>
