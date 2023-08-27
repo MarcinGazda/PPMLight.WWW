@@ -1,5 +1,14 @@
 @use "../../assets/variables.scss" as *;
 
+#orange {
+  svg {
+    fill: $orange;
+    g {
+      fill: $orange;
+    }
+  }
+}
+
 .container {
   margin-bottom: 6rem;
 
@@ -125,10 +134,19 @@
 
   .wrapper {
     display: flex;
-    .media {
+    .circle {
       width: 100px;
       height: 100px;
       margin: 0 1.5rem 2.5rem 1.3rem;
+      background: #f9fcf8;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.orange {
+        background: #fff;
+      }
     }
   }
 }
