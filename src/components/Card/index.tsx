@@ -10,6 +10,7 @@ export enum Color {
 
 type props = {
   svg: React.ReactNode;
+  svgWhite: React.ReactNode;
   title: string;
   description: string;
   color?: Color;
@@ -22,6 +23,7 @@ const Card = (props: props) => {
       Aos.refresh();
     };
   }, []);
+  console.log("data", props);
   return (
     <div
       data-aos="fade-up"
@@ -37,7 +39,7 @@ const Card = (props: props) => {
           }${props?.color === Color.Gray ? styles.gray : ""}`}
         ></div>
         {props.svg}
-        {props.svg}
+        {props.svgWhite}
       </div>
       <div className={styles.text}>
         <h3 className={styles.title}>{props.title}</h3>
