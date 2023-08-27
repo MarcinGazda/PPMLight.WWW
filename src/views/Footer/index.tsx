@@ -1,10 +1,17 @@
 import styles from "./index.module.scss";
 import Logo from "../../assets/logoPPMLight.svg";
 import { Input } from "antd";
+import { Link } from "react-scroll";
 
 const { TextArea } = Input;
 
-const MENU_ITEMS = ["Home", "Features", "Pricing", "FAQ", "Contact us"];
+const MENU_ITEMS = [
+  { name: "Home", to: "home", offset: -90 },
+  { name: "Features", to: "features", offset: -110 },
+  { name: "Pricing", to: "pricing", offset: -130 },
+  { name: "FAQ", to: "faq", offset: 50 },
+  { name: "Contact us", to: "contact", offset: -100 },
+];
 
 const companyDetails = [
   "AGILEME SP. Z O. O.",
@@ -16,7 +23,19 @@ const companyDetails = [
 ];
 
 const Footer = () => {
-  const menuList = MENU_ITEMS.map((item, index) => <li key={index}>{item}</li>);
+  const menuList = MENU_ITEMS.map((item, index) => (
+    <li key={index}>
+      <Link
+        to={item.to}
+        offset={item.offset}
+        spy={true}
+        smooth={true}
+        duration={500}
+      >
+        {item.name}
+      </Link>
+    </li>
+  ));
 
   const CompanyDetails = companyDetails.map((detail, index) => (
     <p key={index} className={styles.compDescription}>
@@ -25,7 +44,7 @@ const Footer = () => {
   ));
 
   return (
-    <footer className={styles.footer} id="contact ">
+    <footer className={styles.footer} id="contact">
       <div className={styles.container}>
         <div className={styles.footerTop}>
           <div className={styles.subscribeWrapper}>

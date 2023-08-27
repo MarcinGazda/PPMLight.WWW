@@ -69,7 +69,7 @@ const Header = () => {
                 to="home"
                 spy={true}
                 smooth={true}
-                offset={-50}
+                offset={-90}
                 duration={500}
                 onClick={menuToggleHandler}
               >
