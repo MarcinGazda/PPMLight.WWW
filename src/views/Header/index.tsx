@@ -46,6 +46,10 @@ const Header = () => {
     setMenuOpen((prev) => !prev);
   };
 
+  const closeMenuHandler = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <header
       className={`${styles.header} ${isScrolled ? styles.isScrolled : ""} ${
@@ -71,7 +75,7 @@ const Header = () => {
                 smooth={true}
                 offset={-90}
                 duration={500}
-                onClick={menuToggleHandler}
+                onClick={closeMenuHandler}
               >
                 Home
               </Link>
@@ -83,7 +87,7 @@ const Header = () => {
                 smooth={true}
                 offset={-110}
                 duration={500}
-                onClick={menuToggleHandler}
+                onClick={closeMenuHandler}
               >
                 Features
               </Link>
@@ -93,9 +97,9 @@ const Header = () => {
                 to="pricing"
                 spy={true}
                 smooth={true}
-                offset={-30}
+                offset={-50}
                 duration={500}
-                onClick={menuToggleHandler}
+                onClick={closeMenuHandler}
               >
                 Pricing
               </Link>
@@ -107,7 +111,7 @@ const Header = () => {
                 smooth={true}
                 offset={50}
                 duration={500}
-                onClick={menuToggleHandler}
+                onClick={closeMenuHandler}
               >
                 FAQ
               </Link>
@@ -119,7 +123,7 @@ const Header = () => {
                 smooth={true}
                 offset={-100}
                 duration={500}
-                onClick={menuToggleHandler}
+                onClick={closeMenuHandler}
               >
                 Contact us
               </Link>

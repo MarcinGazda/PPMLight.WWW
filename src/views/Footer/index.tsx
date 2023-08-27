@@ -8,7 +8,7 @@ const { TextArea } = Input;
 const MENU_ITEMS = [
   { name: "Home", to: "home", offset: -90 },
   { name: "Features", to: "features", offset: -110 },
-  { name: "Pricing", to: "pricing", offset: -130 },
+  { name: "Pricing", to: "pricing", offset: -50 },
   { name: "FAQ", to: "faq", offset: 50 },
   { name: "Contact us", to: "contact", offset: -100 },
 ];

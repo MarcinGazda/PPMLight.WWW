@@ -53,7 +53,7 @@ const MainFunctionality = () => {
   }, []);
 
   return (
-    <section className={styles.container} id="features">
+    <section className={styles.container}>
       <img className={styles.background} src={backgroundImg} alt="" />
       <h2 data-aos="slide-left" data-aos-once="true" className={styles.title}>
         How Does PPMlight Work?

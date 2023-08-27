@@ -82,7 +82,7 @@ const TipsAndTricks = () => {
 
   return (
     <section>
-      <div className={styles.container}>
+      <div className={styles.container} id="features">
         <div className={styles.text}>
           <h2 className={styles.title}>Our stand outs</h2>
           {tricksElements(TRICKS)}
