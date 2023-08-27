@@ -25,7 +25,7 @@ const Footer = () => {
   ));
 
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} id="contact ">
       <div className={styles.container}>
         <div className={styles.footerTop}>
           <div className={styles.subscribeWrapper}>

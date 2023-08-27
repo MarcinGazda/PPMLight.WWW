@@ -102,7 +102,7 @@ const FAQ = () => {
   ));
 
   return (
-    <section className={styles.background}>
+    <section className={styles.background} id="faq">
       <h2 className={styles.title}>FAQ</h2>
       <p className={styles.description}></p>
       <div className={styles.wrapper}>{faq}</div>

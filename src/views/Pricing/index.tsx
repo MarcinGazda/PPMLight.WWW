@@ -54,7 +54,7 @@ const Pricing = () => {
   ));
 
   return (
-    <section>
+    <section id="pricing">
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <h1 className={styles.title}>Pricing</h1>

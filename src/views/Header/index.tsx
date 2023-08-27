@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-scroll";
 
 import { AiOutlineClose } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
@@ -64,19 +65,64 @@ const Header = () => {
         >
           <ul>
             <li>
-              <a>Home</a>
+              <Link
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={500}
+                onClick={menuToggleHandler}
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <a>Features</a>
+              <Link
+                to="features"
+                spy={true}
+                smooth={true}
+                offset={-110}
+                duration={500}
+                onClick={menuToggleHandler}
+              >
+                Features
+              </Link>
             </li>
             <li>
-              <a>Pricing</a>
+              <Link
+                to="pricing"
+                spy={true}
+                smooth={true}
+                offset={-30}
+                duration={500}
+                onClick={menuToggleHandler}
+              >
+                Pricing
+              </Link>
             </li>
             <li>
-              <a>FAQ</a>
+              <Link
+                to="faq"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+                onClick={menuToggleHandler}
+              >
+                FAQ
+              </Link>
             </li>
             <li>
-              <a>Contact us</a>
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+                onClick={menuToggleHandler}
+              >
+                Contact us
+              </Link>
             </li>
             <li>
               <a href="/" className={styles.subBtn}>

@@ -29,7 +29,7 @@ const Hero = () => {
   const scaleStyle = { scale: `${calculatePercentage(screenWidth)}` };
 
   return (
-    <section>
+    <section id="home">
       <div className={styles.background}>
         <img className={styles.imgBackground} src={BackgroundImg} alt="" />
         <div className={styles.container} style={scaleStyle}>
